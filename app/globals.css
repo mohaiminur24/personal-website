@@ -2,20 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer components {
+  .btn-primary {
+    @apply bg-yellow-700 text-sm text-white font-semibold py-2 px-4 rounded-md hover:scale-105 duration-75;
+  }
+  .btn-secondary {
+    @apply bg-transparent text-sm text-white border-2 font-semibold py-2 px-4 rounded-md hover:scale-105 duration-75;
+  }
+  .section-title {
+    @apply text-4xl font-semibold text-gray-800 text-left tracking-wide;
+  }
+  .main-slider-bg {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.7),
+        rgba(128, 128, 128, 0.7)
+      ),
+      url("/slider-background.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .typing-effect {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid;
+    width: 0;
+    animation: typing 3s steps(20, end) forwards, blink 0.7s infinite;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0%, 50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: white;
+  }
 }

@@ -1,12 +1,11 @@
 import { ReactNode } from "react";
 
 interface PropsTypes {
-    screenSpace?: number;
-    children: ReactNode;
+  children: ReactNode;
 }
 
-export default function ScreenWrapper({ screenSpace=20, children }: PropsTypes) {
-    return (
-        <div className={`ms-${screenSpace} flex item-center w-[90%]`}>{children}</div>
-    );
+export default function ScreenWrapper({ children }: PropsTypes) {
+  return (
+    <div className={`ms-20 flex item-center w-[90%] flex-col`}>{children}</div>
+  );
 }
