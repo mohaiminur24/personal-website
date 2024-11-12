@@ -7,7 +7,7 @@ export default function AboutMeSection() {
   return (
     <SectionWrapper>
       <div className="flex flex-col lg:flex-row h-auto overflow-hidden gap-5 md:gap-20">
-        <div className="flex justify-center">
+        <div className="flex justify-center lg:justify-end flex-1">
           <Image
             width={350}
             className="rounded-md shadow-sm animate-pulse shadow-yellow-300"
@@ -18,10 +18,10 @@ export default function AboutMeSection() {
         <div className="flex-1 justify-center flex flex-col font-thin">
           <h1 className="section-title">About me</h1>
           <h2>Software Engineer at {personalDetails.office}</h2>
-          <h2 className="text-xs mt-2 text-gray-500">
+          <h2 className="text-xs mt-2 w-[100%] lg:w-[70%] xl:w-[50%] text-gray-500">
             {personalDetails.description}
           </h2>
-          <h2 className="text-xs mt-5 text-gray-500">
+          <h2 className="text-xs mt-5 w-[100%] lg:w-[70%] xl:w-[50%] text-gray-500">
             {personalDetails.subDescription}
           </h2>
           <div className="flex space-x-4 mt-6">

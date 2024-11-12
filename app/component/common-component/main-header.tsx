@@ -27,14 +27,14 @@ export default function MainHeader() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
+      setIsScrolled(window.scrollY > 10);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <div className={`ml-1-20 flex w-full justify-center items-center fixed top-0 z-50 transition-colors duration-300 ${isScrolled? "bg-white":"bg-transparent"}`}>
+    <div className={`ml-1-20 flex w-full justify-center items-center fixed top-0 z-50 transition-colors duration-300 ${isScrolled? "bg-white shadow-md":"bg-transparent"}`}>
       <div className="navbar w-[90%]">
         <div className="navbar-start">
           <div className="dropdown">
